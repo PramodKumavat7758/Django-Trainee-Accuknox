@@ -1,17 +1,15 @@
 # Django Trainee  - Accuknox
-This project demonstrates the behavior of Django signals, particularly:
 
+## 1) Django Signals
+  This project demonstrates the behavior of Django signals, particularly:
 Whether signals run in the same thread as the caller.
-
-Whether signals execute in the same database transaction as the caller.
-
-The project uses the built-in SQLite database.
+Whether signals execute in the same database transaction as the caller.The project uses the built-in SQLite database.
 
   
 
-## Project Setup
+### Project Setup
 
-### Ensure you have the following installed:
+#### Ensure you have the following installed:
 
 Python 3.x
 
