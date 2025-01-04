@@ -31,22 +31,22 @@ python manage.py startapp users
 
 
 
-2. **Dockerization**
-   1. Create docker file with the name **Dockerfile** , navigate to the path of file and execute.
-   2. Build the Dockerfile using below command.
+2. **Add App to Installed Apps**
+   1. Update INSTALLED_APPS in signal_demo/settings.py
       
       ```bash
-      docker build -t wisecow-image .
+      INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'users',  # Add this line
+]
       ```
-   ![Docker Images](DockerImages.png)
-   
-   3. Create repository/ container registry to Dockerhub and push the image with proper tag to it.
-      
-      ```bash
-      docker push _yourRepositoryName_/wisecow_image:latest
-      ```
+ 
 
-   ![Dockerization](ImagePush.png)
    
 
 2. **Kubernetes Deployment :**
