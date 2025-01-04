@@ -49,25 +49,17 @@ python manage.py startapp users
 
    
 
-2. **Kubernetes Deployment :**
+2. **Set up Signals and make migrations :**
  
-   1. Create Kubernetes deployment manifest files for deploying the Wisecow application in a Kubernetes environment. ex : deployment_manifests_kubernetes.yaml
-   2. Create service file exposed as a Kubernetes service for accessibility. ex : service_manifests_kubernetes.yaml
-   3. Apply the deployment and service using following commands.
-
-   ```bash
-   kubectl apply -f deployment_manifests_kubernetes.yaml
-   kubectl apply -f service_manifests_kubernetes.yaml
-   ```
-      
-   4. Check deployments and services running.Use commands.
+   1. Create a file in users/signals.py:
+   2. Connect the signal in users/apps.py:
+   3. Create a folder users/management/commands and add a file test_signal.py
+   4. Apply migration
       
     ```bash
-   kubectl get deployments
-   kubectl get services
+    python manage.py migrate
    ```
-    ![Kubernete  Service Deployment](status.png)
-   
+       
 5. **Continuous Integration And Deployment**
    1.Github workflow for
    a. Create yaml file in ./github/workflows
