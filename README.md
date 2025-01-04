@@ -17,7 +17,14 @@ Python 3.x
 
 Django 4.x or later
 
-1. **Create Django Project**
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository_url>
+   ```
+### OR
+
+2. **Create Django Project**
 
 You can install Django and start new project as follows:
 
@@ -31,7 +38,7 @@ python manage.py startapp users
 
 
 
-2. **Add App to Installed Apps**
+3. **Add App to Installed Apps**
    1. Update INSTALLED_APPS in signal_demo/settings.py
       
       ```bash
@@ -49,7 +56,7 @@ python manage.py startapp users
 
    
 
-2. **Set up Signals and make migrations :**
+4. **Set up Signals and make migrations :**
  
    1. Create a file in users/signals.py:
    2. Connect the signal in users/apps.py:
@@ -60,20 +67,13 @@ python manage.py startapp users
     python manage.py migrate
    ```
        
-5. **Continuous Integration And Deployment**
-   1.Github workflow for
-   a. Create yaml file in ./github/workflows
-   b. Set the secrets **secrets.DOCKER_USERNAME** and **secrets.DOCKER_PASSWORD** with your Dockerhub username and docker image name.
-   
-   ![workflow](workflow.png)
-
-6. **TLS Implementaion**
-   1. Install OpenSSL.
-      
+5. **Run the project**
+   Use following command to run project 
    ```bash
-   sudo apt-get install openssl  
+    python manage.py test_signal
    ```
-   ![openssl](openssl.png)
+
+   ![Output](output.png)
 
    
    2. Generate Private Key.
