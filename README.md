@@ -1,6 +1,6 @@
 # Django Trainee  - Accuknox
 
-## 1) Django Signals
+## A) Topic - Django Signals
   This project demonstrates the behavior of Django signals, particularly:
 Whether signals run in the same thread as the caller.
 Whether signals execute in the same database transaction as the caller.The project uses the built-in SQLite database.
@@ -73,31 +73,17 @@ python manage.py startapp users
 
    ![Output](output.png)
 
-   
-   2. Generate Private Key.
-      
-   ```bash
-   openssl genrsa -out server.key 2048
-   ```
-   3. Generate Certificate Signing Request (CSR)
-      
-   ```bash
-   openssl req -new -key server.key -out server.csr
-   ```
-   4. Self-Sign Certificate
-      
-   ```bash
-   openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
-   ```
-![Certificate](sert.png)
-   
-   5. Deploy to Kubernetes. Reference this TLS secret in Kubernetes deployment configuration to enable TLS
-      
-   ```bash
-   kubectl create secret tls tls-secret --cert=server.crt --key=server.key
-   ```
-7. **Output**
-   ![WisecowRun](wisecowOutput.png)
----
+## B) Topic - Custom Classes in Python
+ Description: You are tasked with creating a Rectangle class with the following requirements:
+1.An instance of the Rectangle class requires length:int and width:int to be initialized.
+2.We can iterate over an instance of the Rectangle class
+3.When an instance of the Rectangle class is iterated over, we first get its length in the format: {'length': <VALUE_OF_LENGTH>} followed by the width {width:
+<VALUE_OF_WIDTH>}
+
+Run following command:
+ ```bash
+    python Rectangle.py
+ ```
+![Output](RectangleOut.png)
 
 Feel free to customize this README to provide more specific information about your project. Include any additional setup instructions, prerequisites, or specific details about your application that you think would be helpful for users.
